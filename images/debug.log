@@ -1,0 +1,17 @@
+[0322/025504.921:ERROR:local_storage_context_mojo.cc(706)] Lost connection to database
+[0322/160255.228:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0322/160300.240:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0322/160305.255:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0322/160310.275:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0322/160315.287:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0322/160320.295:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0322/160325.301:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0322/160330.319:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0322/160335.333:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0322/160340.349:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0322/160345.366:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0322/160350.386:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0322/160355.398:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0322/160400.416:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0322/171316.982:WARNING:ipc_message_attachment_set.cc(49)] MessageAttachmentSet destroyed with unconsumed attachments: 0/1
+[0322/171317.346:ERROR:browser_gpu_channel_host_factory.cc(139)] Failed to launch GPU process.

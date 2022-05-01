@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    font-family:'Montserrat',sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all 0.5s linear;
+}
+$blue:#2597f4;
+$white:#fff;
+$black:#334;
+$light-color:#777;
+$light0bg:#f5f5f5;
+$border:.2rem solid $black;
+$box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+
+@mixin grid($val){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val,1fr));
+    gap:2rem;
+}
+@mixin graphText($graphSize){
+    font-size: $graphSize;
+    line-height: 2;
+    color:$light-color;
+}
+@mixin titleText($titleSize){
+    font-size: $titleSize;
+    text-transform: capitalize;
+    color:$black ;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+    scroll-padding-top:6rem ;
+
+    &::-webkit-scrollbar{
+        width:1rem;
+    }
+    &::-webkit-scrollbar-track{
+        background: $white;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: $blue;
+        border-radius: 5rem;
+    }
+}
+section{
+    padding: 5rem 10%;
+}
+.heading{
+    text-align: center;
+    margin-bottom: 3rem;
+    @include titleText(4rem);
+    
+    span{
+        color: $blue;
+    }
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    @include titleText(1.5rem);
+    border:$border;
+    background: $white;
+
+    &:hover{
+        background: $blue;
+        border-color: $blue;
+        color: $white;
+    }
+}
+.header{
+    .content-info{
+        padding: 2rem 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: $blue;
+        p{
+            font-size:1.5rem ;
+            color: $white;
+            
+            i{
+                padding-right: .5rem;
+                color:rgb(211, 211, 34);
+            }
+        }
+    }
+    .navbar{
+        padding: 2rem 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: $white;
+        border-bottom:$border;
+        position: relative;
+        z-index: 1000;
+
+        &.active{
+            position: fixed;
+            top: 0;left:0;right:     0;
+            border-bottom: none;
+            box-shadow: $box-shadow;
+        }
+
+        .logo{
+            @include titleText(2.5rem);
+            font-weight: bolder;
+
+            i{
+                color: $blue;
+            }
+        }
+
+        .links{
+
+            a{
+                margin-left: 2rem;
+                @include titleText(2rem);
+                &:hover{
+                    text-decoration: underline;
+                    color: $blue;
+                }
+            }
+        }
+    }
+    #menu-btn{
+        font-size: 3rem;
+        cursor: pointer;
+        color: $black;
+        display: none;
+    }
+}
+
+#contact{
+    .container{
+
+        display: flex;
+        flex-wrap: wrap;
+        
+        h1{
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+        p{
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+    }
+    .box-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        div a{
+            border-radius: 20px;
+        }
+    }
+}
+
+.footer{
+    background: $light0bg;
+
+    .box-container{
+        @include grid(25rem);
+
+        .box{
+            h3{
+                @include titleText(2.2rem);
+                padding: 1rem 0;
+            }
+            .link{
+                display: block;
+                padding: .5rem 0;
+                @include graphText(1.5rem);
+
+                i{
+                    padding-right: .5rem;
+                    color: $blue;
+                }
+            }
+            p{
+                padding: .5rem 0;
+                @include graphText(1.5rem);
+
+                span{
+                    color: $blue;
+                }
+            }
+            .email{
+                width: 100%;;
+                border: $border;
+                padding: 1.6rem 1.4rem;
+                font-size:1.6rem ;
+                color: $light-color;
+                margin: 1rem 0;
+            }
+            .share{
+                margin-top: 1rem;
+                a{
+                    height: 4.5rem;
+                    width: 4.5rem;
+                    line-height: 4.5rem;
+                    font-size: 1.9rem;
+                    color: $blue;
+                    margin-right: .6rem;
+
+                    &:hover{
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+    .credit
+    {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-evenly;
+            align-content: stretch;
+            border-top: 0.2rem solid #334;
+        p{
+            @include titleText(2rem);
+            margin-top: 3rem;
+            padding: 2.5rem;
+        }
+    
+    }
+    span{
+        color: $blue;
+    }
+}
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+
+        .content-info{
+            padding: 2rem 5%;
+            display: flex;
+        }
+        
+        .navbar{
+            padding: 2rem;
+        }
+    }
+    section{
+        padding: 3rem 2rem;
+    }
+    .box-container{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center
+
+        div a{
+            border-radius: 20px;
+        }
+    }
+    img{
+        width: 500px;
+        margin-bottom: 3rem;
+    }
+}
+@media (max-width:778px){
+    .box-container{
+        display: flex;
+        flex-wrap: wrap;
+
+        div a{
+            border-radius: 20px;
+        }  
+    }
+    .header{
+        .content-info{
+            display: none;
+        }
+
+        #menu-btn{
+            display:inline-block;
+
+            &.fa-times{
+                transform: rotate(180deg);
+            }
+        }
+        .navbar{
+
+            .links{
+                position: absolute;
+                top: 99%; left: 0;right:0;
+                background: $white;
+                border-top: $border;
+                border-bottom: $border;
+                clip-path: polygon(0 0,100% 0, 100% 0, 0 0);
+                
+                &.active{
+                    clip-path: polygon(0 0,100% 0,100% 100%, 0 100%);
+                }
+                a{
+                    display: flex;
+                    justify-content: space-around;
+                    margin:2.5rem 2rem;
+                    font-size: 2.5rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width:450px){
+    #contact .container{
+        h1{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+    }
+    html{
+        font-size: 55%;
+    }
+    .home .content h3{
+        font-size: 3rem;
+    }
+    .box-container{
+        display: flex;
+        flex-wrap: wrap;
+
+        div a{
+            border-radius: 20px;
+        }  
+        img{
+            width: 250px;
+            margin-bottom: 3rem;
+        }
+    }
+}
